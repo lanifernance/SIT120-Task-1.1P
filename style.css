@@ -4,7 +4,7 @@ body {
 
 /* corresponds to the div class 'content' and applies columns to the contents of the div */
 .content {
-	column-count: 3;
+	column-count: 2;
 	column-gap: 20px;
 	column-rule: 1px solid gray;
 	column-width: 350px;
