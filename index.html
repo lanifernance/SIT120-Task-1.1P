@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Week 1 Practical </title>
+<style>
+h1 {
+	color: orange;
+	text-align: center;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="content">
+<h1> Welcome to my Week 1 Prac Web Page</h1>
+<img src="dog.jpg" width="400" alt="A german shepherd dog laying in the snow"><br>
+Image Source: <a href="">Tahoe on Unsplash</a>
+
+<h3 style="color:blue;">Things I hope to learn in this unit:</h3>
+<ul>
+<li>Designing for mobile devices
+<li>Putting together a cohesive finished project
+<li>Using JavaScript effectively
+</ul>
+
+<h3 style="color:red;">How excited are you for SIT120?</h3>
+<form>
+<input type="radio" id="very" name="excitement_level" value="Very">
+<label for="very">Very</label><br>
+<input type="radio" id="extremely" name="excitement_level" value="Extremely">
+<label for="extremely">Extremely</label><br>
+<input type="radio" id="ridiculously" name="excitement_level" value="Ridiculously">
+<label for="ridiculously">Ridiculously</label><br>
+<input type="submit" value="Submit">
+</form>
+<h3> Today's Date: </h3>
+<script>
+	function showDate(){
+	var d = new Date();
+	var str = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear()
+	document.getElementById('display').innerHTML = str
+	}
+</script>
+<input type=button value="Show Date" onclick="showDate();">
+<div id=display></div>
+
+<h3> Student Scores</h3>
+Enter your scores below to calculate your total and average score:<br>
+<script>
+	function showScores(){
+	var score1 = parseInt(document.getElementById('field1').value);
+	var score2 = parseInt(document.getElementById('field2').value);
+	var score3 = parseInt(document.getElementById('field3').value);
+	var total = score1 + score2 + score3;
+	var average = total / 3;
+	document.getElementById('display2').innerHTML = "Total Score: " + total + " / 300 <br>Average Score: " + average + "%";
+	}
+</script>
+<input type="text" id="field1" value="Score 1"><br>
+<input type="text" id="field2" value="Score 2"><br>
+<input type="text" id="field3" value="Score 3"><br>
+<input type=button value="Show Results" onclick="showScores();">
+<div id=display2></div>
+
+
+</body>
+
+<footer>
+</footer>
+
+</html>

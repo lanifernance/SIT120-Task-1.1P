@@ -1,0 +1,14 @@
+body {
+	background-color: #F9DDD6;
+}
+
+.content {
+	column-count: 3;
+	column-gap: 20px;
+	column-rule: 1px solid gray;
+	column-width: 350px;
+}
+
+h1 {
+	column-span: all;
+}
