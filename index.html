@@ -3,21 +3,26 @@
 
 <head>
 <title> Week 1 Practical </title>
+<!-- internal style -->
 <style>
 h1 {
 	color: orange;
 	text-align: center;
 }
 </style>
+<!-- external style sheet -->
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<!-- adding the div class "content" allows us to assign columns to that div in the external style sheet-->
 <div class="content">
+<!-- page header, image and link -->
 <h1> Welcome to my Week 1 Prac Web Page</h1>
 <img src="dog.jpg" width="400" alt="A german shepherd dog laying in the snow"><br>
 Image Source: <a href="">Tahoe on Unsplash</a>
 
+<!-- unordered list with header -->
 <h3 style="color:blue;">Things I hope to learn in this unit:</h3>
 <ul>
 <li>Designing for mobile devices
@@ -25,6 +30,7 @@ Image Source: <a href="">Tahoe on Unsplash</a>
 <li>Using JavaScript effectively
 </ul>
 
+<!-- basic form with header -->
 <h3 style="color:red;">How excited are you for SIT120?</h3>
 <form>
 <input type="radio" id="very" name="excitement_level" value="Very">
@@ -35,6 +41,7 @@ Image Source: <a href="">Tahoe on Unsplash</a>
 <label for="ridiculously">Ridiculously</label><br>
 <input type="submit" value="Submit">
 </form>
+<!-- simple javascript button to show today's date -->
 <h3> Today's Date: </h3>
 <script>
 	function showDate(){
@@ -44,8 +51,10 @@ Image Source: <a href="">Tahoe on Unsplash</a>
 	}
 </script>
 <input type=button value="Show Date" onclick="showDate();">
+<!-- str i.e. the result of the date formatting is displayed in the div 'display' -->
 <div id=display></div>
 
+<!-- more complex javascript application taking user input and using it to calculate average and total scores -->
 <h3> Student Scores</h3>
 Enter your scores below to calculate your total and average score:<br>
 <script>
@@ -58,10 +67,13 @@ Enter your scores below to calculate your total and average score:<br>
 	document.getElementById('display2').innerHTML = "Total Score: " + total + " / 300 <br>Average Score: " + average + "%";
 	}
 </script>
+<!-- each field has an id that the script reads and uses parseInt to grab the integer value entered -->
 <input type="text" id="field1" value="Score 1"><br>
 <input type="text" id="field2" value="Score 2"><br>
 <input type="text" id="field3" value="Score 3"><br>
+<!-- then when the button is clicked the function showScores() is called and calculates total and average-->
 <input type=button value="Show Results" onclick="showScores();">
+<!-- display2 shows the script where to print the result by using getElementById -->
 <div id=display2></div>
 
 
